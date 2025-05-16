@@ -1,0 +1,89 @@
+id,title,language,proportion,number,language_full
+1498,"A Voz de Timor (Dili, East Timor : 1970 - 1975)",pt,0.9191919191919192,100,Portuguese
+1283,"Berita Repoeblik (Djakarta, Indonesia : 1945 - 1946)",id,0.99,100,Indonesian
+1186,"Chinese Republic News (Sydney, NSW : 1914 - 1937)",zh,0.97,100,Chinese
+1600,"Deutsch-Australische Post : Wochenschrift = German-Australian Post : Weekly (Sydney, NSW : 1893 - 1906)",de,1.0,100,German
+1591,"Die Brucke = The Bridge (Sydney, NSW : 1934 - 1939)",de,0.71,100,German
+1591,"Die Brucke = The Bridge (Sydney, NSW : 1934 - 1939)",en,0.29,100,English
+1044,"Dutch Australian Weekly (Sydney, NSW : 1951 - 1993)",nl,0.9795918367346939,100,Dutch
+1045,"Dutch Weekly (Sydney, NSW : 1993 - 2004)",nl,0.9393939393939394,100,Dutch
+1045,"Dutch Weekly (Sydney, NSW : 1993 - 2004)",en,0.06060606060606061,100,English
+704,"Guang yi hua bao = The Chinese Australian Herald (Sydney, NSW : 1894 - 1923)",zh,1.0,100,Chinese
+279,"Il Giornale Italiano (Sydney, NSW : 1932 - 1940)",it,0.91,100,Italian
+279,"Il Giornale Italiano (Sydney, NSW : 1932 - 1940)",en,0.09,100,English
+1601,"Il Risveglio = The Awakening (Sydney, NSW : 1944 - 1954)",it,0.75,100,Italian
+1601,"Il Risveglio = The Awakening (Sydney, NSW : 1944 - 1954)",en,0.25,100,English
+1602,"Italian Bulletin of Australia (Sydney, NSW : 1922 - 1928, 1935 - 1940)",en,0.8,100,English
+1602,"Italian Bulletin of Australia (Sydney, NSW : 1922 - 1928, 1935 - 1940)",it,0.15,100,Italian
+1602,"Italian Bulletin of Australia (Sydney, NSW : 1922 - 1928, 1935 - 1940)",la,0.05,100,Latin
+1603,"Italian Bulletin of Commerce (Sydney, NSW : 1929 - 1935)",en,0.85,100,English
+1603,"Italian Bulletin of Commerce (Sydney, NSW : 1929 - 1935)",it,0.14,100,Italian
+1595,"Italo-Australian (Sydney, NSW : 1927 - 1940)",it,0.97,100,Italian
+1596,"L'Italo-Australiano = The Italo-Australian (Surry Hills, NSW : 1885)",it,0.7021276595744681,100,Italian
+1596,"L'Italo-Australiano = The Italo-Australian (Surry Hills, NSW : 1885)",qu,0.05319148936170213,100,Quechua
+1596,"L'Italo-Australiano = The Italo-Australian (Surry Hills, NSW : 1885)",la,0.14893617021276595,100,Latin
+1596,"L'Italo-Australiano = The Italo-Australian (Surry Hills, NSW : 1885)",an,0.06382978723404255,100,Aragonese
+1597,"L'Italo-Australiano = The Italo-Australian (Sydney, NSW : 1905 - 1909)",it,0.97,100,Italian
+829,"Le Courrier Australien (Sydney, NSW : 1892 - 2011)",fr,0.76,100,French
+829,"Le Courrier Australien (Sydney, NSW : 1892 - 2011)",en,0.24,100,English
+280,"Meie Kodu - Our Home (Sydney, NSW : 1949 - 1956)",et,1.0,100,Estonian
+1594,"Musu Pastoge = Our Haven (Sydney, NSW : 1950 - 1954)",lt,0.95,100,Lithuanian
+1594,"Musu Pastoge = Our Haven (Sydney, NSW : 1950 - 1954)",en,0.05,100,English
+1598,"Oceania (Sydney, NSW : 1913 - 1915)",it,0.54,100,Italian
+1598,"Oceania (Sydney, NSW : 1913 - 1915)",en,0.46,100,English
+1604,"Revue Australienne : Journal des Interets Francais en Australie ... (Sydney, NSW : 1873 - 1874)",fr,0.98,100,French
+1592,"To Ethnico Vema = Greek National Tribune (Arncliffe, NSW : 1931 - 1954)",el,1.0,100,Modern Greek (1453-)
+1185,"Tung Wah News (Sydney, NSW : 1898 - 1902)",zh,1.0,100,Chinese
+1184,"Tung Wah Times (Sydney, NSW : 1901 - 1936)",zh,0.99,100,Chinese
+1599,"Uniamoci (Sydney, NSW : 1903 - 1904)",it,1.0,100,Italian
+1593,"Vil'na Dumka = Free Thought (Sydney, NSW : 1949 - 1954)",uk,0.82,100,Ukrainian
+1593,"Vil'na Dumka = Free Thought (Sydney, NSW : 1949 - 1954)",en,0.18,100,English
+277,Adelaider Deutsche Zeitung (SA : 1851 - 1862),de,1.0,100,German
+1876,Australijos Lietuvis = The Australian Lithuanian (SA : 1948 - 1956),lt,0.97,100,Lithuanian
+1150,"Australische Zeitung (Adelaide, SA : 1875 - 1916)",de,1.0,100,German
+1577,"Deutsche Zeitung fur Sud-Australien = German Times for South Australia (Tanunda, SA : 1851)",en,0.1,10,English
+1577,"Deutsche Zeitung fur Sud-Australien = German Times for South Australia (Tanunda, SA : 1851)",de,0.9,10,German
+1576,"Die Deutsche Post für die Australischen Colonien = The German Australian Post (Adelaide, SA : 1848 - 1851)",de,0.99,100,German
+1323,"Nasza droga (Adelaide, SA : 1952 - 1954)",pl,0.89,100,Polish
+1323,"Nasza droga (Adelaide, SA : 1952 - 1954)",en,0.11,100,English
+278,"Süd Australische Zeitung (Tanunda and Adelaide, SA : 1860 - 1874)",de,0.99,100,German
+314,"Suedaustralische Zeitung (Adelaide, SA : 1850 - 1851)",de,0.8888888888888888,18,German
+314,"Suedaustralische Zeitung (Adelaide, SA : 1850 - 1851)",en,0.1111111111111111,18,English
+1686,"Australier Leben = Australian Life (Melbourne, Vic. : 1931 - 1933)",he,1.0,100,Hebrew
+705,"Chinese Times (Melbourne, Vic. : 1902 - 1922)",zh,1.0,100,Chinese
+797,"Norden (Melbourne, Vic. : 1914 - 1918)",da,0.6428571428571429,100,Danish
+797,"Norden (Melbourne, Vic. : 1914 - 1918)",en,0.061224489795918366,100,English
+797,"Norden (Melbourne, Vic. : 1914 - 1918)",no,0.15306122448979592,100,Norwegian
+797,"Norden (Melbourne, Vic. : 1914 - 1918)",sv,0.09183673469387756,100,Swedish
+1685,"The Australian Jewish News (Melbourne, Vic. : 1935 - 1999)",en,0.77,100,English
+1685,"The Australian Jewish News (Melbourne, Vic. : 1935 - 1999)",he,0.23,100,Hebrew
+1777,"The Australian Jewish Post (St. Kilda, Vic. : 1966 - 1968)",he,1.0,100,Hebrew
+706,"The Chinese Advertiser (Ballarat, Vic. : 1856)",zh,0.8,10,Chinese
+706,"The Chinese Advertiser (Ballarat, Vic. : 1856)",la,0.2,10,Latin
+685,The English and Chinese Advertiser (Vic. : 1856 - 1858),la,0.22727272727272727,22,Latin
+685,The English and Chinese Advertiser (Vic. : 1856 - 1858),zh,0.7727272727272727,22,Chinese
+1776,"The Jewish Post (Melbourne, Vic. : 1949 - 1966)",he,1.0,100,Hebrew
+1707,"The Jewish Weekly News (Melbourne, Vic. : 1933 - 1935)",en,0.81,100,English
+1707,"The Jewish Weekly News (Melbourne, Vic. : 1933 - 1935)",he,0.19,100,Hebrew
+1383,"Chung Wah News (Perth, WA : 1981 - 1987)",zh,0.49,100,Chinese
+1383,"Chung Wah News (Perth, WA : 1981 - 1987)",en,0.5,100,English
+1385,"Der Australische Spiegel = The Australian Mirror (Perth, WA : 1952)",de,0.82,100,German
+1385,"Der Australische Spiegel = The Australian Mirror (Perth, WA : 1952)",en,0.18,100,English
+1384,"Echo : Polski Tygodnik Niezalezny (Perth, WA : 1950 - 1952)",pl,0.88,100,Polish
+1384,"Echo : Polski Tygodnik Niezalezny (Perth, WA : 1950 - 1952)",en,0.12,100,English
+1387,"Eco Italiano (Perth, WA : 1958 - 1959)",it,0.9795918367346939,100,Italian
+1389,"Hellenic Echo (Perth, WA : 1967 - 1968)",el,1.0,100,Modern Greek (1453-)
+1378,"Il Canguro = The Kangaroo (Perth, WA : 1955 - 1957)",it,0.96,100,Italian
+1386,"Japanese Perth Times (Subiaco, WA : 1989 - 1996)",ja,0.96,100,Japanese
+1388,"La Rondine (Perth, WA : 1970 - 1974; 1983 - 1984)",it,0.98,100,Italian
+1390,"Mediterranean Voice (Perth, WA : 1971 - 1972)",es,0.06060606060606061,100,Spanish
+1390,"Mediterranean Voice (Perth, WA : 1971 - 1972)",fr,0.08080808080808081,100,French
+1390,"Mediterranean Voice (Perth, WA : 1971 - 1972)",en,0.23232323232323232,100,English
+1390,"Mediterranean Voice (Perth, WA : 1971 - 1972)",el,0.3333333333333333,100,Modern Greek (1453-)
+1390,"Mediterranean Voice (Perth, WA : 1971 - 1972)",pt,0.16161616161616163,100,Portuguese
+1380,"Stampa Italiana = The Italian Press (Perth, WA : 1931 - 1932)",it,0.98,100,Italian
+1379,"Sunday Times Edizione Italiana (Perth, WA : 1958 - 1959)",it,1.0,100,Italian
+1381,"The Voice of Freedom = Elefthera Phoni (Perth, WA : 1956 - 1957)",el,0.98,100,Modern Greek (1453-)
+1382,"Vesnik (Perth, WA : 1975 - 1994)",en,0.3402061855670103,100,English
+1382,"Vesnik (Perth, WA : 1975 - 1994)",mk,0.41237113402061853,100,Macedonian
+1382,"Vesnik (Perth, WA : 1975 - 1994)",bs,0.14432989690721648,100,Bosnian

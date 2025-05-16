@@ -1,0 +1,11 @@
+rdflib
+rocrate
+requests
+PyGithub
+GitPython
+beautifulsoup4
+lxml
+jupyterlab
+arrow
+roc-validator
+pandas

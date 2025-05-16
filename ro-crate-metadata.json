@@ -1,0 +1,408 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "author": [
+                {
+                    "@id": "https://orcid.org/0000-0001-7956-4498"
+                }
+            ],
+            "codeRepository": "",
+            "datePublished": "2025-05-16T03:27:48+00:00",
+            "description": "",
+            "hasPart": [
+                {
+                    "@id": "more_context.ipynb"
+                },
+                {
+                    "@id": "notebook_with_external_data.ipynb"
+                },
+                {
+                    "@id": "https://glam-workbench.s3.ap-southeast-2.amazonaws.com/aww-covers.tar.gz"
+                },
+                {
+                    "@id": "minimal_metadata.ipynb"
+                },
+                {
+                    "@id": "notebook_with_external_github_data.ipynb"
+                },
+                {
+                    "@id": "https://raw.githubusercontent.com/GLAM-Workbench/trove-newspapers-non-english/refs/heads/main/newspapers_non_english.csv"
+                },
+                {
+                    "@id": "https://raw.githubusercontent.com/GLAM-Workbench/trove-newspapers-non-english/refs/heads/main/newspapers_non_english_test.csv"
+                },
+                {
+                    "@id": "https://github.com/GLAM-Workbench/recordsearch/blob/master/data/A6119-items.csv"
+                },
+                {
+                    "@id": "local_data.ipynb"
+                },
+                {
+                    "@id": "data/my_nma_dataset.csv"
+                }
+            ],
+            "license": {
+                "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+            },
+            "mentions": [
+                {
+                    "@id": "#notebook_with_external_data_run_0"
+                },
+                {
+                    "@id": "#notebook_with_external_github_data_run_0"
+                },
+                {
+                    "@id": "#local_data_run_0"
+                }
+            ],
+            "name": "example-repo"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.1"
+            }
+        },
+        {
+            "@id": "https://www.python.org/downloads/release/python-31012/",
+            "@type": [
+                "ComputerLanguage",
+                "SoftwareApplication"
+            ],
+            "name": "Python 3.10.12",
+            "url": "https://www.python.org/downloads/release/python-31012/",
+            "version": "3.10.12"
+        },
+        {
+            "@id": "more_context.ipynb",
+            "@type": [
+                "File",
+                "SoftwareSourceCode"
+            ],
+            "author": {
+                "@id": "https://orcid.org/0000-0001-7956-4498"
+            },
+            "conformsTo": {
+                "@id": "https://purl.archive.org/textcommons/profile#Notebook"
+            },
+            "description": "This notebook explores a fictional sample of pet ownership.",
+            "encodingFormat": "application/x-ipynb+json",
+            "mainEntityOfPage": {
+                "@id": "https://glam-workbench.net/trove-newspapers/visualise-total-newspaper-articles-by-state-year/"
+            },
+            "name": "More context entities",
+            "programmingLanguage": {
+                "@id": "https://www.python.org/downloads/release/python-31012/"
+            },
+            "workExample": [
+                {
+                    "@id": "https://glam-workbench.net/prov/getting-started/"
+                },
+                {
+                    "@id": "https://glam-workbench.net/trove-newspapers/find-non-english-newspapers/"
+                },
+                {
+                    "@id": "https://glam-workbench.net/trove-newspapers/Analysing_OCR_corrections/"
+                }
+            ]
+        },
+        {
+            "@id": "https://orcid.org/0000-0001-7956-4498",
+            "@type": "Person",
+            "mainEntityOfPage": {
+                "@id": "https://timsherratt.au"
+            },
+            "name": "Sherratt, Tim"
+        },
+        {
+            "@id": "https://timsherratt.au",
+            "@type": "CreativeWork",
+            "name": "timsherratt.au - timsherratt.au",
+            "url": "https://timsherratt.au"
+        },
+        {
+            "@id": "https://glam-workbench.net/trove-newspapers/visualise-total-newspaper-articles-by-state-year/",
+            "@type": "CreativeWork",
+            "name": "Visualise the total number of newspaper articles in Trove by year and state - GLAM Workbench",
+            "url": "https://glam-workbench.net/trove-newspapers/visualise-total-newspaper-articles-by-state-year/"
+        },
+        {
+            "@id": "https://glam-workbench.net/prov/getting-started/",
+            "@type": "CreativeWork",
+            "name": "Getting started with the PROV API - GLAM Workbench",
+            "url": "https://glam-workbench.net/prov/getting-started/"
+        },
+        {
+            "@id": "https://glam-workbench.net/trove-newspapers/find-non-english-newspapers/",
+            "@type": "CreativeWork",
+            "isPartOf": {
+                "@id": "https://glam-workbench.net/"
+            },
+            "name": "Another example",
+            "url": "https://glam-workbench.net/trove-newspapers/find-non-english-newspapers/"
+        },
+        {
+            "@id": "https://glam-workbench.net/",
+            "@type": "CreativeWork",
+            "name": "GLAM Workbench",
+            "url": "https://glam-workbench.net/"
+        },
+        {
+            "@id": "https://glam-workbench.net/trove-newspapers/Analysing_OCR_corrections/",
+            "@type": "WebPage",
+            "isPartOf": {
+                "@id": "https://glam-workbench.net/"
+            },
+            "name": "Example of resource derived from notebook",
+            "url": "https://glam-workbench.net/trove-newspapers/Analysing_OCR_corrections/"
+        },
+        {
+            "@id": "notebook_with_external_data.ipynb",
+            "@type": [
+                "File",
+                "SoftwareSourceCode"
+            ],
+            "author": {
+                "@id": "https://orcid.org/0000-0001-7956-4498"
+            },
+            "conformsTo": {
+                "@id": "https://purl.archive.org/textcommons/profile#Notebook"
+            },
+            "encodingFormat": "application/x-ipynb+json",
+            "license": {
+                "@id": "https://spdx.org/licenses/MIT"
+            },
+            "name": "Notebook with data on some other platform (eg AWS)",
+            "programmingLanguage": {
+                "@id": "https://www.python.org/downloads/release/python-31012/"
+            }
+        },
+        {
+            "@id": "https://glam-workbench.s3.ap-southeast-2.amazonaws.com/aww-covers.tar.gz",
+            "@type": [
+                "File",
+                "Dataset"
+            ],
+            "dateModified": "2024-09-13T07:01:28+00:00",
+            "name": "aww-covers.tar.gz",
+            "sdDatePublished": "2025-05-16T03:27:50.660159+00:00",
+            "size": "1639991506",
+            "url": "https://glam-workbench.s3.ap-southeast-2.amazonaws.com/aww-covers.tar.gz"
+        },
+        {
+            "@id": "#notebook_with_external_data_run_0",
+            "@type": "CreateAction",
+            "actionStatus": {
+                "@id": "http://schema.org/CompletedActionStatus"
+            },
+            "description": "This run of the notebook did things.",
+            "endDate": "2024-09-13T07:01:28+00:00",
+            "instrument": {
+                "@id": "notebook_with_external_data.ipynb"
+            },
+            "name": "Generation of data",
+            "result": {
+                "@id": "https://glam-workbench.s3.ap-southeast-2.amazonaws.com/aww-covers.tar.gz"
+            }
+        },
+        {
+            "@id": "https://spdx.org/licenses/MIT",
+            "@type": "CreativeWork",
+            "name": "MIT License",
+            "url": "https://spdx.org/licenses/MIT.html"
+        },
+        {
+            "@id": "minimal_metadata.ipynb",
+            "@type": [
+                "File",
+                "SoftwareSourceCode"
+            ],
+            "author": {
+                "@id": "https://orcid.org/0000-0001-7956-4498"
+            },
+            "conformsTo": {
+                "@id": "https://purl.archive.org/textcommons/profile#Notebook"
+            },
+            "description": "This notebook just has basic metadata.",
+            "encodingFormat": "application/x-ipynb+json",
+            "name": "Minimal metadata",
+            "programmingLanguage": {
+                "@id": "https://www.python.org/downloads/release/python-31012/"
+            }
+        },
+        {
+            "@id": "notebook_with_external_github_data.ipynb",
+            "@type": [
+                "File",
+                "SoftwareSourceCode"
+            ],
+            "author": {
+                "@id": "https://orcid.org/0000-0001-7956-4498"
+            },
+            "conformsTo": {
+                "@id": "https://purl.archive.org/textcommons/profile#Notebook"
+            },
+            "encodingFormat": "application/x-ipynb+json",
+            "license": {
+                "@id": "https://spdx.org/licenses/MIT"
+            },
+            "name": "Notebook with data in another GitHub repo",
+            "programmingLanguage": {
+                "@id": "https://www.python.org/downloads/release/python-31012/"
+            }
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/GLAM-Workbench/trove-newspapers-non-english/refs/heads/main/newspapers_non_english.csv",
+            "@type": [
+                "File",
+                "Dataset"
+            ],
+            "dateModified": "2024-09-14T03:42:36+00:00",
+            "isPartOf": {
+                "@id": "https://github.com/GLAM-Workbench/trove-newspapers-non-english/"
+            },
+            "name": "newspapers_non_english.csv",
+            "sdDatePublished": "2025-05-16T03:27:51.790279+00:00",
+            "size": 7619,
+            "subjectOf": {
+                "@id": "https://glam-workbench.net/trove-newspapers/list-non-english-newspapers/"
+            },
+            "url": "https://raw.githubusercontent.com/GLAM-Workbench/trove-newspapers-non-english/refs/heads/main/newspapers_non_english.csv"
+        },
+        {
+            "@id": "https://github.com/GLAM-Workbench/trove-newspapers-non-english/",
+            "@type": "CreativeWork",
+            "name": "GitHub - GLAM-Workbench/trove-newspapers-non-english",
+            "url": "https://github.com/GLAM-Workbench/trove-newspapers-non-english"
+        },
+        {
+            "@id": "https://glam-workbench.net/trove-newspapers/list-non-english-newspapers/",
+            "@type": "CreativeWork",
+            "name": "Trove newspapers with non-English language content - GLAM Workbench",
+            "url": "https://glam-workbench.net/trove-newspapers/list-non-english-newspapers/"
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/GLAM-Workbench/trove-newspapers-non-english/refs/heads/main/newspapers_non_english_test.csv",
+            "@type": [
+                "File",
+                "Dataset"
+            ],
+            "contentSize": 7619,
+            "dateModified": "2025-05-14T02:20:15.345967+00:00",
+            "isPartOf": {
+                "@id": "https://github.com/GLAM-Workbench/trove-newspapers-non-english/"
+            },
+            "name": "newspapers_non_english_test.csv",
+            "sdDatePublished": "2025-05-16T03:27:53.817315+00:00",
+            "size": 89,
+            "url": "https://raw.githubusercontent.com/GLAM-Workbench/trove-newspapers-non-english/refs/heads/main/newspapers_non_english_test.csv"
+        },
+        {
+            "@id": "https://github.com/GLAM-Workbench/recordsearch/blob/master/data/A6119-items.csv",
+            "@type": [
+                "File",
+                "Dataset"
+            ],
+            "dateModified": "2023-01-20T03:27:08+00:00",
+            "isPartOf": {
+                "@id": "https://github.com/GLAM-Workbench/recordsearch"
+            },
+            "name": "A6119-items.csv",
+            "sdDatePublished": "2025-05-16T03:27:54.626994+00:00",
+            "size": 900420,
+            "url": "https://github.com/GLAM-Workbench/recordsearch/blob/master/data/A6119-items.csv"
+        },
+        {
+            "@id": "https://github.com/GLAM-Workbench/recordsearch",
+            "@type": "CreativeWork",
+            "name": "GitHub - GLAM-Workbench/recordsearch",
+            "url": "https://github.com/GLAM-Workbench/recordsearch"
+        },
+        {
+            "@id": "#notebook_with_external_github_data_run_0",
+            "@type": "CreateAction",
+            "actionStatus": {
+                "@id": "http://schema.org/CompletedActionStatus"
+            },
+            "description": "This run of the notebook did things.",
+            "endDate": "2025-05-14T02:20:15.345967+00:00",
+            "instrument": {
+                "@id": "notebook_with_external_github_data.ipynb"
+            },
+            "name": "Generation of data",
+            "result": [
+                {
+                    "@id": "https://raw.githubusercontent.com/GLAM-Workbench/trove-newspapers-non-english/refs/heads/main/newspapers_non_english.csv"
+                },
+                {
+                    "@id": "https://raw.githubusercontent.com/GLAM-Workbench/trove-newspapers-non-english/refs/heads/main/newspapers_non_english_test.csv"
+                },
+                {
+                    "@id": "https://github.com/GLAM-Workbench/recordsearch/blob/master/data/A6119-items.csv"
+                }
+            ]
+        },
+        {
+            "@id": "local_data.ipynb",
+            "@type": [
+                "File",
+                "SoftwareSourceCode"
+            ],
+            "author": {
+                "@id": "https://orcid.org/0000-0001-7956-4498"
+            },
+            "conformsTo": {
+                "@id": "https://purl.archive.org/textcommons/profile#Notebook"
+            },
+            "encodingFormat": "application/x-ipynb+json",
+            "license": {
+                "@id": "https://spdx.org/licenses/MIT"
+            },
+            "name": "Notebook with data in current repo",
+            "programmingLanguage": {
+                "@id": "https://www.python.org/downloads/release/python-31012/"
+            }
+        },
+        {
+            "@id": "data/my_nma_dataset.csv",
+            "@type": [
+                "File",
+                "Dataset"
+            ],
+            "contentSize": 52,
+            "dateModified": "2025-05-14T02:17:56.306588+00:00",
+            "name": "My test dataset",
+            "sdDatePublished": "2025-05-16T03:27:57.603833+00:00",
+            "size": 5
+        },
+        {
+            "@id": "#local_data_run_0",
+            "@type": "CreateAction",
+            "actionStatus": {
+                "@id": "http://schema.org/CompletedActionStatus"
+            },
+            "description": "This run of the notebook did things.",
+            "endDate": "2025-05-14T02:17:56.306588+00:00",
+            "instrument": {
+                "@id": "local_data.ipynb"
+            },
+            "name": "Generation of data",
+            "result": {
+                "@id": "data/my_nma_dataset.csv"
+            }
+        },
+        {
+            "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "@type": "CreativeWork",
+            "name": "CC0 Public Domain Dedication",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+    ]
+}
