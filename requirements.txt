@@ -76,6 +76,7 @@ exceptiongroup==1.2.2
     #   anyio
     #   cattrs
     #   ipython
+    #   pytest
 executing==2.2.0
     # via stack-data
 fastjsonschema==2.21.1
@@ -103,6 +104,8 @@ idna==3.10
     #   url-normalize
 importlib-metadata==8.7.0
     # via pyshacl
+iniconfig==2.1.0
+    # via pytest
 inquirerpy==0.3.4
     # via roc-validator
 ipykernel==6.29.5
@@ -209,6 +212,7 @@ packaging==25.0
     #   jupyterlab-server
     #   nbconvert
     #   pyshacl
+    #   pytest
 pandas==2.2.3
     # via -r requirements.in
 pandocfilters==1.5.1
@@ -223,6 +227,8 @@ platformdirs==4.3.7
     # via
     #   jupyter-core
     #   requests-cache
+pluggy==1.6.0
+    # via pytest
 prettytable==3.16.0
     # via pyshacl
 prometheus-client==0.21.1
@@ -257,6 +263,8 @@ pyparsing==3.2.3
     # via rdflib
 pyshacl==0.26.0
     # via roc-validator
+pytest==8.3.5
+    # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via
     #   arrow
@@ -341,7 +349,9 @@ tinycss2==1.4.0
 toml==0.10.2
     # via roc-validator
 tomli==2.2.1
-    # via jupyterlab
+    # via
+    #   jupyterlab
+    #   pytest
 tornado==6.4.2
     # via
     #   ipykernel

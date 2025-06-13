@@ -9,8 +9,7 @@
                     "@id": "https://orcid.org/0000-0001-7956-4498"
                 }
             ],
-            "codeRepository": "",
-            "datePublished": "2025-05-16T03:27:48+00:00",
+            "datePublished": "2025-06-03T11:49:27+00:00",
             "description": "",
             "hasPart": [
                 {
@@ -58,7 +57,7 @@
                     "@id": "#local_data_run_0"
                 }
             ],
-            "name": "example-repo"
+            "name": "rocrate-scripts"
         },
         {
             "@id": "ro-crate-metadata.json",
@@ -69,6 +68,12 @@
             "conformsTo": {
                 "@id": "https://w3id.org/ro/crate/1.1"
             }
+        },
+        {
+            "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "@type": "CreativeWork",
+            "name": "CC0 Public Domain Dedication",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
         },
         {
             "@id": "https://www.python.org/downloads/release/python-31012/",
@@ -94,6 +99,9 @@
             },
             "description": "This notebook explores a fictional sample of pet ownership.",
             "encodingFormat": "application/x-ipynb+json",
+            "isPartOf": {
+                "@id": "https://github.com/GLAM-Workbench/rocrate-scripts/"
+            },
             "mainEntityOfPage": {
                 "@id": "https://glam-workbench.net/trove-newspapers/visualise-total-newspaper-articles-by-state-year/"
             },
@@ -101,6 +109,7 @@
             "programmingLanguage": {
                 "@id": "https://www.python.org/downloads/release/python-31012/"
             },
+            "url": "https://github.com/GLAM-Workbench/rocrate-scripts/blob/main/more_context.ipynb",
             "workExample": [
                 {
                     "@id": "https://glam-workbench.net/prov/getting-started/"
@@ -156,12 +165,18 @@
         },
         {
             "@id": "https://glam-workbench.net/trove-newspapers/Analysing_OCR_corrections/",
-            "@type": "WebPage",
+            "@type": "CreativeWork",
             "isPartOf": {
                 "@id": "https://glam-workbench.net/"
             },
             "name": "Example of resource derived from notebook",
             "url": "https://glam-workbench.net/trove-newspapers/Analysing_OCR_corrections/"
+        },
+        {
+            "@id": "https://github.com/GLAM-Workbench/rocrate-scripts/",
+            "@type": "CreativeWork",
+            "name": "GitHub - GLAM-Workbench/rocrate-scripts",
+            "url": "https://github.com/GLAM-Workbench/rocrate-scripts/"
         },
         {
             "@id": "notebook_with_external_data.ipynb",
@@ -176,13 +191,17 @@
                 "@id": "https://purl.archive.org/textcommons/profile#Notebook"
             },
             "encodingFormat": "application/x-ipynb+json",
+            "isPartOf": {
+                "@id": "https://github.com/GLAM-Workbench/rocrate-scripts/"
+            },
             "license": {
                 "@id": "https://spdx.org/licenses/MIT"
             },
             "name": "Notebook with data on some other platform (eg AWS)",
             "programmingLanguage": {
                 "@id": "https://www.python.org/downloads/release/python-31012/"
-            }
+            },
+            "url": "https://github.com/GLAM-Workbench/rocrate-scripts/blob/main/notebook_with_external_data.ipynb"
         },
         {
             "@id": "https://glam-workbench.s3.ap-southeast-2.amazonaws.com/aww-covers.tar.gz",
@@ -190,10 +209,10 @@
                 "File",
                 "Dataset"
             ],
+            "contentSize": "1639991506",
             "dateModified": "2024-09-13T07:01:28+00:00",
             "name": "aww-covers.tar.gz",
-            "sdDatePublished": "2025-05-16T03:27:50.660159+00:00",
-            "size": "1639991506",
+            "sdDatePublished": "2025-06-03T11:49:29.985299+00:00",
             "url": "https://glam-workbench.s3.ap-southeast-2.amazonaws.com/aww-covers.tar.gz"
         },
         {
@@ -232,10 +251,14 @@
             },
             "description": "This notebook just has basic metadata.",
             "encodingFormat": "application/x-ipynb+json",
+            "isPartOf": {
+                "@id": "https://github.com/GLAM-Workbench/rocrate-scripts/"
+            },
             "name": "Minimal metadata",
             "programmingLanguage": {
                 "@id": "https://www.python.org/downloads/release/python-31012/"
-            }
+            },
+            "url": "https://github.com/GLAM-Workbench/rocrate-scripts/blob/main/minimal_metadata.ipynb"
         },
         {
             "@id": "notebook_with_external_github_data.ipynb",
@@ -250,13 +273,17 @@
                 "@id": "https://purl.archive.org/textcommons/profile#Notebook"
             },
             "encodingFormat": "application/x-ipynb+json",
+            "isPartOf": {
+                "@id": "https://github.com/GLAM-Workbench/rocrate-scripts/"
+            },
             "license": {
                 "@id": "https://spdx.org/licenses/MIT"
             },
             "name": "Notebook with data in another GitHub repo",
             "programmingLanguage": {
                 "@id": "https://www.python.org/downloads/release/python-31012/"
-            }
+            },
+            "url": "https://github.com/GLAM-Workbench/rocrate-scripts/blob/main/notebook_with_external_github_data.ipynb"
         },
         {
             "@id": "https://raw.githubusercontent.com/GLAM-Workbench/trove-newspapers-non-english/refs/heads/main/newspapers_non_english.csv",
@@ -264,13 +291,13 @@
                 "File",
                 "Dataset"
             ],
+            "contentSize": 7619,
             "dateModified": "2024-09-14T03:42:36+00:00",
             "isPartOf": {
                 "@id": "https://github.com/GLAM-Workbench/trove-newspapers-non-english/"
             },
             "name": "newspapers_non_english.csv",
-            "sdDatePublished": "2025-05-16T03:27:51.790279+00:00",
-            "size": 7619,
+            "sdDatePublished": "2025-06-03T11:49:32.263997+00:00",
             "subjectOf": {
                 "@id": "https://glam-workbench.net/trove-newspapers/list-non-english-newspapers/"
             },
@@ -300,7 +327,7 @@
                 "@id": "https://github.com/GLAM-Workbench/trove-newspapers-non-english/"
             },
             "name": "newspapers_non_english_test.csv",
-            "sdDatePublished": "2025-05-16T03:27:53.817315+00:00",
+            "sdDatePublished": "2025-06-03T11:49:33.147014+00:00",
             "size": 89,
             "url": "https://raw.githubusercontent.com/GLAM-Workbench/trove-newspapers-non-english/refs/heads/main/newspapers_non_english_test.csv"
         },
@@ -310,13 +337,13 @@
                 "File",
                 "Dataset"
             ],
+            "contentSize": 900420,
             "dateModified": "2023-01-20T03:27:08+00:00",
             "isPartOf": {
                 "@id": "https://github.com/GLAM-Workbench/recordsearch"
             },
             "name": "A6119-items.csv",
-            "sdDatePublished": "2025-05-16T03:27:54.626994+00:00",
-            "size": 900420,
+            "sdDatePublished": "2025-06-03T11:49:33.357891+00:00",
             "url": "https://github.com/GLAM-Workbench/recordsearch/blob/master/data/A6119-items.csv"
         },
         {
@@ -362,13 +389,17 @@
                 "@id": "https://purl.archive.org/textcommons/profile#Notebook"
             },
             "encodingFormat": "application/x-ipynb+json",
+            "isPartOf": {
+                "@id": "https://github.com/GLAM-Workbench/rocrate-scripts/"
+            },
             "license": {
                 "@id": "https://spdx.org/licenses/MIT"
             },
             "name": "Notebook with data in current repo",
             "programmingLanguage": {
                 "@id": "https://www.python.org/downloads/release/python-31012/"
-            }
+            },
+            "url": "https://github.com/GLAM-Workbench/rocrate-scripts/blob/main/local_data.ipynb"
         },
         {
             "@id": "data/my_nma_dataset.csv",
@@ -378,8 +409,11 @@
             ],
             "contentSize": 52,
             "dateModified": "2025-05-14T02:17:56.306588+00:00",
+            "isPartOf": {
+                "@id": "https://github.com/GLAM-Workbench/rocrate-scripts/"
+            },
             "name": "My test dataset",
-            "sdDatePublished": "2025-05-16T03:27:57.603833+00:00",
+            "sdDatePublished": "2025-06-03T11:49:36.949986+00:00",
             "size": 5
         },
         {
@@ -397,12 +431,6 @@
             "result": {
                 "@id": "data/my_nma_dataset.csv"
             }
-        },
-        {
-            "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
-            "@type": "CreativeWork",
-            "name": "CC0 Public Domain Dedication",
-            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
     ]
 }
