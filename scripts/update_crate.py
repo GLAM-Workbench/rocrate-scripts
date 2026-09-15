@@ -17,6 +17,7 @@ from github import Github
 import re
 import arrow
 import git
+import mimetypes
 
 LICENCES = json.loads(Path("scripts", "licences.json").read_text())
 CONTEXT_PROPERTIES = [
@@ -28,14 +29,16 @@ CONTEXT_PROPERTIES = [
     "isBasedOn",
     "distribution",
     "isPartOf",
-    "license"
+    "license",
 ]
 
 
 def main(crate_path, defaults, version, data_repo):
     # Make working directory the parent of the scripts directory
     os.chdir(Path(__file__).resolve().parent.parent)
-    crate_maker = CrateMaker(crate_path, defaults=defaults, version=version, data_repo=data_repo)
+    crate_maker = CrateMaker(
+        crate_path, defaults=defaults, version=version, data_repo=data_repo
+    )
     # Update the crate
     crate_maker.update_crate()
 
@@ -54,7 +57,6 @@ def delistify(value):
 
 
 class CrateMaker:
-
     def __init__(self, crate_path="./", defaults=None, version=None, data_repo=None):
         # Make working directory the parent of the scripts directory
         os.chdir(Path(__file__).resolve().parent.parent)
@@ -104,7 +106,7 @@ class CrateMaker:
         """
         files = Path(path).glob("*.ipynb")
         is_notebook = lambda file: not file.name.lower().startswith(
-            ("draft", "untitled", "index")
+            ("draft", "untitled", "index.")
         ) and self.creates_data(file)
         return list(filter(is_notebook, files))
 
@@ -236,7 +238,7 @@ class CrateMaker:
                 "@id": url,
                 "@type": "DataDownload",
                 "name": "Download repository as zip",
-                "url": url
+                "url": url,
             }
             added.append(self.add_context_entity(download))
         return added
@@ -270,6 +272,10 @@ class CrateMaker:
             file_stats = local_file.stat()
             stats["contentSize"] = file_stats.st_size
             stats["dateModified"] = arrow.get(file_stats.st_mtime).isoformat()
+            # Guess the encoding type from extension
+            encoding = mimetypes.guess_type(local_path)[0]
+            if encoding:
+                stats["encodingFormat"] = encoding
             if local_file.name.endswith((".csv", ".ndjson")):
                 stats["size"] = 0
                 with local_file.open("r") as df:
@@ -296,7 +302,8 @@ class CrateMaker:
     def get_gh_parts(self, url):
         try:
             owner, repo = re.search(
-                r"https*://.*(?:github|githubusercontent).com/(.+?)/([a-zA-Z0-9\-_]+)", url
+                r"https*://.*(?:github|githubusercontent).com/(.+?)/([a-zA-Z0-9\-_]+)",
+                url,
             ).groups()
         except AttributeError:
             owner = None
@@ -317,9 +324,7 @@ class CrateMaker:
         # Try to get some info from the local git repo
         try:
             repo = git.Repo(".")
-            repo_url = repo.remotes.origin.url.replace(
-                ".git", "/"
-            )
+            repo_url = repo.remotes.origin.url.replace(".git", "/")
             repo_name = repo_url.strip("/").split("/")[-1]
         # There is no git repo or no remote set
         except (InvalidGitRepositoryError, GitCommandError):
@@ -367,7 +372,6 @@ class CrateMaker:
         default_branch = self.get_default_gh_branch(repo_url)
         return f"{repo_url.strip('/')}/blob/{default_branch}/{file_path}"
 
-
     def add_files(self, files):
         added = []
         for data_file in files:
@@ -391,6 +395,7 @@ class CrateMaker:
                             file_id = local_path
                         else:
                             fetch_remote = True
+                        self.set_gw_index_page(data_file, trim=False)
                     file_added = self.crate.add_file(
                         file_id, properties=props, fetch_remote=fetch_remote
                     )
@@ -405,7 +410,7 @@ class CrateMaker:
                 )
                 added.append(file_added)
         return added
-    
+
     def file_in_repo(self, data_file):
         """
         Check a data file's url to see if it's part of the data repo specified
@@ -485,12 +490,24 @@ class CrateMaker:
         nb = nbformat.read(notebook, nbformat.NO_CONVERT)
         return {k: v for k, v in nb.metadata.rocrate.items() if v}
 
+    def set_gw_index_page(self, metadata, trim=True):
+        """
+        Get the GLAM Workbench index page from a notebook or data file page,
+        removing the last path segment if its a notebook.
+        """
+        file_page = metadata.get("mainEntityOfPage")
+        if not file_page:
+            return
+        else:
+            if trim:
+                paths = file_page.strip("/").split("/")
+                index_page = "/".join(paths[:-1])
+            else:
+                index_page = file_page
+            self.index_page = index_page
+
     def add_notebook(self, notebook):
         gh_url = self.get_gh_file_url(notebook)
-        if self.data_repo:
-            nb_id = gh_url
-        else:
-            nb_id = notebook
         # Get metadata embedded in notebooks
         nb_metadata = self.get_nb_metadata(notebook)
         nb_metadata = self.add_repo_link(nb_metadata)
@@ -504,6 +521,11 @@ class CrateMaker:
             ),
             "url": gh_url,
         }
+        if self.data_repo:
+            nb_id = gh_url
+        else:
+            nb_id = notebook
+            self.set_gw_index_page(nb_metadata)
         # Add notebook to crate
         new_nb = self.crate.add_file(nb_id, properties=nb_props)
         # Add properties from notebook metadata
@@ -520,10 +542,14 @@ class CrateMaker:
             root_props = {
                 k: v
                 for k, v in old_props.items()
-                if k in ["name", "description", "mainEntityOfPage"] and not isinstance(v, dict)
+                if k in ["name", "description", "mainEntityOfPage"]
+                and not isinstance(v, dict)
             }
-            entities = {k: old_crate.get(v["@id"]) for k, v in old_props.items()
-                if k in ["mainEntityOfPage", "license"] and isinstance(v, dict)}
+            entities = {
+                k: old_crate.get(v["@id"])
+                for k, v in old_props.items()
+                if k in ["mainEntityOfPage", "license"] and isinstance(v, dict)
+            }
             # Get version UpdateAction records for inclusion in new crate
             versions = old_crate.get_by_type("UpdateAction")
         # If there's not an existing crate, try to set some default properties
@@ -536,9 +562,9 @@ class CrateMaker:
     def prepare_data_crate(self):
         _, repo_name = self.get_gh_parts(self.data_repo)
         if repo_name:
-            crate_source = f"./{repo_name}-rocrate"
+            crate_source = f"{repo_name}-ro-crate-metadata.json"
         else:
-            crate_source = "./data-rocrate"
+            crate_source = "data-ro-crate-metadata.json"
         _, code_repo_url = self.get_repo_info()
         root_props, entities, versions = self.get_old_crate_data(crate_source)
         if not root_props:
@@ -547,6 +573,7 @@ class CrateMaker:
                 "description": self.defaults.get("description", ""),
                 "isBasedOn": self.defaults.get("isBasedOn", code_repo_url),
                 "distribution": f"{self.data_repo.rstrip('/')}/archive/refs/heads/main.zip",
+                "url": self.data_repo,
             }
             versions = []
             entities = {}
@@ -564,7 +591,7 @@ class CrateMaker:
                 "codeRepository": self.defaults.get("codeRepository", repo_url),
             }
             versions = []
-        return root_props, "./", entities, versions
+        return root_props, "ro-crate-metadata.json", entities, versions
 
     def update_crate(self):
         if self.data_repo:
@@ -575,7 +602,7 @@ class CrateMaker:
         # Add properties to the root
         root = self.crate.get("./")
         # update_jsonld doesn't seem to work here?
-        #for p, v in root_props.items():
+        # for p, v in root_props.items():
         #    root[p] = v
         root = self.update_properties(root, root_props)
         # Add version information
@@ -596,10 +623,13 @@ class CrateMaker:
             for author in listify(nb.get("author")):
                 if author not in root.get("author", []):
                     root.append_to("author", author)
+        root["mainEntityOfPage"] = self.add_page(self.index_page)
         # Set licence of crate metadata
         root["license"] = self.add_context_entity(LICENCES["metadata"])
         # Save crate
-        self.crate.write(crate_source)
+        # print(self.crate)
+        # self.crate.write_detached("ro-crate-data.json")
+        self.crate.write_detached(crate_source)
 
 
 if __name__ == "__main__":
@@ -610,9 +640,7 @@ if __name__ == "__main__":
         help="File containing Crate default values",
         required=False,
     )
-    parser.add_argument(
-        "--crate-path", type=str, help="Path to crate", default="./"
-    )
+    parser.add_argument("--crate-path", type=str, help="Path to crate", default="./")
     parser.add_argument(
         "--version", type=str, help="New version number", required=False
     )
@@ -623,4 +651,9 @@ if __name__ == "__main__":
     else:
         defaults = {}
 
-    main(defaults=defaults, crate_path=args.crate_path, version=args.version, data_repo=args.data_repo)
+    main(
+        defaults=defaults,
+        crate_path=args.crate_path,
+        version=args.version,
+        data_repo=args.data_repo,
+    )
